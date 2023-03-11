@@ -9,6 +9,9 @@ import UIKit
 
 class ResultView: UIView {
     
+    // MARK: - Properties
+    
+    // MARK: - Init
     init() {
         super.init(frame: .zero)
         layout()
@@ -18,6 +21,7 @@ class ResultView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - SetUp
     private func layout() {
         backgroundColor = .green
     }

@@ -9,6 +9,9 @@ import UIKit
 
 class BillInputView: UIView {
     
+    // MARK: - Properties
+    
+    // MARK: - Init
     init() {
         super.init(frame: .zero)
         layout()
@@ -18,6 +21,7 @@ class BillInputView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - SetUp
     private func layout() {
         backgroundColor = .gray
     }
