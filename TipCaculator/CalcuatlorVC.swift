@@ -22,12 +22,12 @@ class CalcuatlorVC: UIViewController {
             resultView,
             billInputView,
             tipInputView,
-            splitInputView
+            splitInputView,
+            UIView() // spacer용으로 추가
             
         ])
         stackView.axis = .vertical
         stackView.spacing = 32
-        //stackView.distribution = .equalSpacing
         return stackView
     }()
     
@@ -37,7 +37,7 @@ class CalcuatlorVC: UIViewController {
     }
     
     private func layout() {
-        view.backgroundColor = .white
+        view.backgroundColor = ThemeColor.background
         view.addSubview(vStackView)
 
         vStackView.snp.makeConstraints {
