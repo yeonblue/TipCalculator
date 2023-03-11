@@ -12,7 +12,7 @@ class ResultView: UIView {
     
     // MARK: - Properties
     private let headerLabel: UILabel = {
-        return LabelFactory.build(text: "Total p/person", font: ThemeFont.demibold(size: 10))
+        return LabelFactory.build(text: "Total p/person", font: ThemeFont.demibold(size: 18))
     }()
     
     private let amountPerPersonLabel: UILabel = {
@@ -51,9 +51,9 @@ class ResultView: UIView {
     
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(),
+            AmountView(title: "Total bill", textAlignment: .left),
             UIView(),
-            AmountView()
+            AmountView(title: "Total tip", textAlignment: .right)
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -94,21 +94,5 @@ class ResultView: UIView {
         }
         
         return view
-    }
-}
-
-class AmountView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        layout()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func layout() {
-        backgroundColor = .red
     }
 }
