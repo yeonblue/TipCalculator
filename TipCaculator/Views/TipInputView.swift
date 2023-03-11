@@ -94,7 +94,8 @@ class TipInputView: UIView {
         
         let text = NSMutableAttributedString(
             string: tip.description,
-            attributes: [.font: ThemeFont.bold(size: 20), .foregroundColor: UIColor.white]
+            attributes: [.font: ThemeFont.bold(size: 20),
+                         .foregroundColor: UIColor.white]
         )
         
         text.addAttributes([.font: ThemeFont.demibold(size: 14)], range: NSMakeRange(2, 1)) // 10, 15, 20%므로 앞의 두자리빼고 %만 적용
