@@ -80,7 +80,6 @@ class SplitInputView: UIView {
         }
     }
     
-    
     /// -, + 버튼 제작 builder 함수
     /// - Parameters:
     ///   - text: title text

@@ -33,6 +33,10 @@
 		451C286729BC550700C05B45 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286629BC550700C05B45 /* AmountView.swift */; };
 		451C286929BC78B800C05B45 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286829BC78B800C05B45 /* HeaderView.swift */; };
 		451C286C29BC7E9E00C05B45 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286B29BC7E9E00C05B45 /* Tip.swift */; };
+		451C286F29BCA17800C05B45 /* CalculatorVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286E29BCA17800C05B45 /* CalculatorVM.swift */; };
+		451C287129BCA20C00C05B45 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287029BCA20C00C05B45 /* ViewModelType.swift */; };
+		451C287329BCA4E600C05B45 /* CalculatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287229BCA4E600C05B45 /* CalculatorResult.swift */; };
+		451C287529BCACD900C05B45 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287429BCACD900C05B45 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		451C286629BC550700C05B45 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		451C286829BC78B800C05B45 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		451C286B29BC7E9E00C05B45 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		451C286E29BCA17800C05B45 /* CalculatorVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVM.swift; sourceTree = "<group>"; };
+		451C287029BCA20C00C05B45 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		451C287229BCA4E600C05B45 /* CalculatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorResult.swift; sourceTree = "<group>"; };
+		451C287429BCACD900C05B45 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +146,7 @@
 				451C281229BB532300C05B45 /* SceneDelegate.swift */,
 				451C281429BB532300C05B45 /* CalcuatlorVC.swift */,
 				451C286A29BC7E9300C05B45 /* Model */,
+				451C286D29BCA16300C05B45 /* ViewModels */,
 				451C285E29BC377A00C05B45 /* Extension */,
 				451C286129BC3FBE00C05B45 /* Factory */,
 				451C285929BC373100C05B45 /* Config */,
@@ -201,6 +210,7 @@
 			children = (
 				451C285F29BC378900C05B45 /* UIColor+Extension.swift */,
 				451C286429BC471400C05B45 /* UIView+Extension.swift */,
+				451C287429BCACD900C05B45 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -217,8 +227,18 @@
 			isa = PBXGroup;
 			children = (
 				451C286B29BC7E9E00C05B45 /* Tip.swift */,
+				451C287029BCA20C00C05B45 /* ViewModelType.swift */,
+				451C287229BCA4E600C05B45 /* CalculatorResult.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		451C286D29BCA16300C05B45 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				451C286E29BCA17800C05B45 /* CalculatorVM.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451C286F29BCA17800C05B45 /* CalculatorVM.swift in Sources */,
 				451C281529BB532300C05B45 /* CalcuatlorVC.swift in Sources */,
 				451C286C29BC7E9E00C05B45 /* Tip.swift in Sources */,
 				451C286529BC471400C05B45 /* UIView+Extension.swift in Sources */,
@@ -374,9 +395,12 @@
 				451C285B29BC375300C05B45 /* ThemeColor.swift in Sources */,
 				451C286029BC378900C05B45 /* UIColor+Extension.swift in Sources */,
 				451C286729BC550700C05B45 /* AmountView.swift in Sources */,
+				451C287529BCACD900C05B45 /* String+Extension.swift in Sources */,
+				451C287129BCA20C00C05B45 /* ViewModelType.swift in Sources */,
 				451C285429BB5DF400C05B45 /* BillInputView.swift in Sources */,
 				451C285229BB5DD800C05B45 /* ResultView.swift in Sources */,
 				451C281129BB532300C05B45 /* AppDelegate.swift in Sources */,
+				451C287329BCA4E600C05B45 /* CalculatorResult.swift in Sources */,
 				451C285D29BC375B00C05B45 /* ThemeFont.swift in Sources */,
 				451C286929BC78B800C05B45 /* HeaderView.swift in Sources */,
 				451C281329BB532300C05B45 /* SceneDelegate.swift in Sources */,

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Combine
+import CombineCocoa
 
 class BillInputView: UIView {
     
@@ -55,10 +57,24 @@ class BillInputView: UIView {
         return textField
     }()
     
+    // AnyPublisher는 자신만의 속성이나 메서드가 없으며, Publisher 프로토콜에 정의된 것만 사용할 수 있다.
+    // 따라서 AnyPublisher에 send(_:) 연산자와 같은 것은 존재하지 않는다.
+    // 다른 모듈에서 사용할 때 퍼블리셔의 실제 타입을 알 필요가 없으므로, AnyPublisher로 감싸서 제공.
+    // PassthroughSubject는 구독자가 없으면 값을 버리므로, PassthroughSubject를 직접 외부에 노출하면 원하는 값이 전달되지 않을 수 있음.
+    // billSubject에 값을 보내는 것은 해당 클래스 내에서만 가능하지만, valuePublisher를 구독하는 것은 외부에서도 가능.
+    
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    var valuePublisher: AnyPublisher<Double, Never> {
+        return billSubject.eraseToAnyPublisher()
+    }
+    
+    private var cancellable = Set<AnyCancellable>()
+    
     // MARK: - Init
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -106,5 +122,17 @@ class BillInputView: UIView {
         
         // view.endEditing(true), reference를 쥐고 있으면 textField.resignFirstResponder()를 사용
         textField.resignFirstResponder()
+    }
+    
+    private func observe() {
+        textField.textPublisher
+            .compactMap { $0 }
+            .sink { [unowned self] text in
+                
+                // 일반적으로, 클로저가 인스턴스보다 오래 살아남을 가능성이 있는 경우에는 weak self를 사용하고, 그렇지 않은 경우에는 unowned self를 사용
+                // escaping closure 같이 클로저가 함수의 실행이 끝나도 남아있을 수 있을 땐 weak self를 사용
+                billSubject.send(text.doubleValue)
+            }
+            .store(in: &cancellable)
     }
 }
