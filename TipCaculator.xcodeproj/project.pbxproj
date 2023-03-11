@@ -32,6 +32,7 @@
 		451C286529BC471400C05B45 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286429BC471400C05B45 /* UIView+Extension.swift */; };
 		451C286729BC550700C05B45 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286629BC550700C05B45 /* AmountView.swift */; };
 		451C286929BC78B800C05B45 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286829BC78B800C05B45 /* HeaderView.swift */; };
+		451C286C29BC7E9E00C05B45 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286B29BC7E9E00C05B45 /* Tip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		451C286429BC471400C05B45 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		451C286629BC550700C05B45 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		451C286829BC78B800C05B45 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		451C286B29BC7E9E00C05B45 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				451C281029BB532300C05B45 /* AppDelegate.swift */,
 				451C281229BB532300C05B45 /* SceneDelegate.swift */,
 				451C281429BB532300C05B45 /* CalcuatlorVC.swift */,
+				451C286A29BC7E9300C05B45 /* Model */,
 				451C285E29BC377A00C05B45 /* Extension */,
 				451C286129BC3FBE00C05B45 /* Factory */,
 				451C285929BC373100C05B45 /* Config */,
@@ -208,6 +211,14 @@
 				451C286229BC3FD800C05B45 /* LabelFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		451C286A29BC7E9300C05B45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				451C286B29BC7E9E00C05B45 /* Tip.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451C281529BB532300C05B45 /* CalcuatlorVC.swift in Sources */,
+				451C286C29BC7E9E00C05B45 /* Tip.swift in Sources */,
 				451C286529BC471400C05B45 /* UIView+Extension.swift in Sources */,
 				451C285029BB5CA400C05B45 /* LogoView.swift in Sources */,
 				451C285B29BC375300C05B45 /* ThemeColor.swift in Sources */,
