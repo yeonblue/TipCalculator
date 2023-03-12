@@ -38,6 +38,7 @@
 		451C287329BCA4E600C05B45 /* CalculatorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287229BCA4E600C05B45 /* CalculatorResult.swift */; };
 		451C287529BCACD900C05B45 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287429BCACD900C05B45 /* String+Extension.swift */; };
 		451C287729BDBF5400C05B45 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287629BDBF5400C05B45 /* UIResponder+Extension.swift */; };
+		451C287A29BDF6B100C05B45 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287929BDF6B100C05B45 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		451C287229BCA4E600C05B45 /* CalculatorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorResult.swift; sourceTree = "<group>"; };
 		451C287429BCACD900C05B45 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		451C287629BDBF5400C05B45 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		451C287929BDF6B100C05B45 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				451C286429BC471400C05B45 /* UIView+Extension.swift */,
 				451C287429BCACD900C05B45 /* String+Extension.swift */,
 				451C287629BDBF5400C05B45 /* UIResponder+Extension.swift */,
+				451C287929BDF6B100C05B45 /* Int+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				451C286C29BC7E9E00C05B45 /* Tip.swift in Sources */,
 				451C286529BC471400C05B45 /* UIView+Extension.swift in Sources */,
 				451C285029BB5CA400C05B45 /* LogoView.swift in Sources */,
+				451C287A29BDF6B100C05B45 /* Int+Extension.swift in Sources */,
 				451C285B29BC375300C05B45 /* ThemeColor.swift in Sources */,
 				451C286029BC378900C05B45 /* UIColor+Extension.swift in Sources */,
 				451C286729BC550700C05B45 /* AmountView.swift in Sources */,
