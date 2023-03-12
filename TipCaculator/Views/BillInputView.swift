@@ -63,6 +63,12 @@ class BillInputView: UIView {
     // PassthroughSubject는 구독자가 없으면 값을 버리므로, PassthroughSubject를 직접 외부에 노출하면 원하는 값이 전달되지 않을 수 있음.
     // billSubject에 값을 보내는 것은 해당 클래스 내에서만 가능하지만, valuePublisher를 구독하는 것은 외부에서도 가능.
     
+    // @Published와 비교해보면
+    // Subject는 직접 값을 보낼 수 있지만, @Published는 프로퍼티의 값이 변경될 때만 값을 보낸다.
+    // Subject는 초기값이 없거나 최근에 발행된 값이 없을 수 있지만, @Published는 항상 현재값을 가짐
+    // Subject는 다양한 종류가 있으며 (PassthroughSubject, CurrentValueSubject 등), 각각 다른 특징을 가지고 있습니다. @Published는 한 가지 종류 뿐
+    
+    
     private let billSubject: PassthroughSubject<Double, Never> = .init()
     var valuePublisher: AnyPublisher<Double, Never> {
         return billSubject.eraseToAnyPublisher()

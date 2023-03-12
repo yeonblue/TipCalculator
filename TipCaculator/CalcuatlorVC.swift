@@ -80,7 +80,7 @@ class CalcuatlorVC: UIViewController {
     private func bindViewModel() {
         let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
-            tipPublisher: Just(.tenPercent).eraseToAnyPublisher(),
+            tipPublisher: tipInputView.valuePublisher,
             splitPublisher: Just(3).eraseToAnyPublisher()
         )
         
