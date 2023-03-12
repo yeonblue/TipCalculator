@@ -49,11 +49,19 @@ class ResultView: UIView {
         return stackView
     }()
     
+    private let totalBillView: AmountView = {
+        return AmountView(title: "Total bill", textAlignment: .left)
+    }()
+    
+    private let totalTipView: AmountView = {
+        return AmountView(title: "Total tip", textAlignment: .right)
+    }()
+    
     private lazy var hStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            AmountView(title: "Total bill", textAlignment: .left),
+            totalBillView,
             UIView(),
-            AmountView(title: "Total tip", textAlignment: .right)
+            totalTipView
         ])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -94,5 +102,17 @@ class ResultView: UIView {
         }
         
         return view
+    }
+    
+    func configure(result: CalculatorResult) {
+        let text = NSMutableAttributedString(
+            string: String(result.amountPerPerson),
+            attributes: [.font: ThemeFont.bold(size: 48)]
+        )
+        text.addAttributes([.font: ThemeFont.bold(size: 24)], range: NSMakeRange(0, 1))
+        amountPerPersonLabel.attributedText = text
+        
+        totalBillView.configure(amount: result.totalBill)
+        totalTipView.configure(amount: result.totalTip)
     }
 }

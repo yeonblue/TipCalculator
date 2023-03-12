@@ -87,8 +87,8 @@ class CalcuatlorVC: UIViewController {
         let output = vm.transform(input: input)
         
         output.updateViewPublisher
-            .sink { result in
-                print(result)
+            .sink { [unowned self] result in
+                resultView.configure(result: result)
             }
             .store(in: &cancellable)
     }
