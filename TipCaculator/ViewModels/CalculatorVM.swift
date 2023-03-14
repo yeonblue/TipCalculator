@@ -14,16 +14,17 @@ class CalculatorVM: ViewModelType {
         let billPublisher: AnyPublisher<Double, Never>
         let tipPublisher: AnyPublisher<Tip, Never>
         let splitPublisher: AnyPublisher<Int, Never>
+        let logoViewTapPublisher: AnyPublisher<Void, Never>
     }
     
     struct Output {
         let updateViewPublisher: AnyPublisher<CalculatorResult, Never>
+        let resetCalculatorPublisher: AnyPublisher<Void, Never>
     }
     
     var cancellables = Set<AnyCancellable>()
     
     func transform(input: Input) -> Output {
-        
         let updateViewPublisher = Publishers.CombineLatest3(
             input.billPublisher,
             input.tipPublisher,
@@ -37,7 +38,10 @@ class CalculatorVM: ViewModelType {
             return Just(result)
         }.eraseToAnyPublisher()
 
-        return Output(updateViewPublisher: updateViewPublisher)
+        let resetPublisher = input.logoViewTapPublisher
+        
+        return Output(updateViewPublisher: updateViewPublisher,
+                      resetCalculatorPublisher: resetPublisher)
     }
     
     private func getTipAmount(bill: Double, tip: Tip) -> Double {

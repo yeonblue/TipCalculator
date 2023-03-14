@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Combine
+import CombineCocoa
 
 class CalcuatlorVC: UIViewController {
 
@@ -36,11 +37,31 @@ class CalcuatlorVC: UIViewController {
     private let vm = CalculatorVM()
     private var cancellable = Set<AnyCancellable>()
     
+    private lazy var viewTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        view.addGestureRecognizer(tapGesture)
+        
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
+    
+    private lazy var logoDoubleTapPublisher: AnyPublisher<Void, Never> = {
+        let tapGesture = UITapGestureRecognizer(target: self, action: nil)
+        tapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tapGesture)
+        
+        return tapGesture.tapPublisher.flatMap { _ in
+            Just(())
+        }.eraseToAnyPublisher()
+    }()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
         bindViewModel()
+        observe()
     }
     
     // MARK: - Setup
@@ -77,11 +98,18 @@ class CalcuatlorVC: UIViewController {
         }
     }
     
+    private func observe() {
+        viewTapPublisher.sink { [unowned self] _ in
+            view.endEditing(true)
+        }.store(in: &cancellable)
+    }
+    
     private func bindViewModel() {
         let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
             tipPublisher: tipInputView.valuePublisher,
-            splitPublisher: splitInputView.valuePublisher
+            splitPublisher: splitInputView.valuePublisher,
+            logoViewTapPublisher: logoDoubleTapPublisher
         )
         
         let output = vm.transform(input: input)
@@ -91,6 +119,11 @@ class CalcuatlorVC: UIViewController {
                 resultView.configure(result: result)
             }
             .store(in: &cancellable)
+        
+        output.resetCalculatorPublisher
+            .sink { _ in
+                print("reset form!")
+            }.store(in: &cancellable)
     }
 }
 

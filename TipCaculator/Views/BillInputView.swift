@@ -68,7 +68,6 @@ class BillInputView: UIView {
     // Subject는 초기값이 없거나 최근에 발행된 값이 없을 수 있지만, @Published는 항상 현재값을 가짐
     // Subject는 다양한 종류가 있으며 (PassthroughSubject, CurrentValueSubject 등), 각각 다른 특징을 가지고 있습니다. @Published는 한 가지 종류 뿐
     
-    
     private let billSubject: PassthroughSubject<Double, Never> = .init()
     var valuePublisher: AnyPublisher<Double, Never> {
         return billSubject.eraseToAnyPublisher()
