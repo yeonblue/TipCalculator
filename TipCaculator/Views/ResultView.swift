@@ -106,7 +106,7 @@ class ResultView: UIView {
     
     func configure(result: CalculatorResult) {
         let text = NSMutableAttributedString(
-            string: String(result.amountPerPerson),
+            string: String(result.amountPerPerson.currencyFormatted),
             attributes: [.font: ThemeFont.bold(size: 48)]
         )
         text.addAttributes([.font: ThemeFont.bold(size: 24)], range: NSMakeRange(0, 1))

@@ -199,4 +199,8 @@ class TipInputView: UIView {
         }
         .store(in: &cancellable)
     }
+    
+    func reset() {
+        tipSubject.send(.none)
+    }
 }
