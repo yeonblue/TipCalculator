@@ -30,7 +30,6 @@ class CalculatorVM: ViewModelType {
         self.audioPlayerService = audioPlayerService
     }
     
-    
     func transform(input: Input) -> Output {
         let updateViewPublisher = Publishers.CombineLatest3(
             input.billPublisher,

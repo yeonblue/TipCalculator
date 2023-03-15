@@ -44,6 +44,7 @@
 		45F2C01629C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01729C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01A29C06A770080BD89 /* AudioPlayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2C01929C06A770080BD89 /* AudioPlayService.swift */; };
+		45F2C02529C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2C02429C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		451C287B29BDFDD600C05B45 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		45F2C01429C06A2F0080BD89 /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
 		45F2C01929C06A770080BD89 /* AudioPlayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayService.swift; sourceTree = "<group>"; };
+		45F2C02429C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcuatlorSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				451C282729BB532500C05B45 /* TipCaculatorTests.swift */,
+				45F2C02429C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift */,
 			);
 			path = TipCaculatorTests;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451C282829BB532500C05B45 /* TipCaculatorTests.swift in Sources */,
+				45F2C02529C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
