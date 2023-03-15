@@ -24,6 +24,7 @@ class ResultView: UIView {
         )
         text.addAttributes([.font: ThemeFont.bold(size: 24)], range: NSMakeRange(0, 1)) // 맨 앞 $표시
         label.attributedText = text
+        label.accessibilityIdentifier = ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue
         
         return label
     }()
@@ -50,11 +51,15 @@ class ResultView: UIView {
     }()
     
     private let totalBillView: AmountView = {
-        return AmountView(title: "Total bill", textAlignment: .left)
+        return AmountView(title: "Total bill",
+                          textAlignment: .left,
+                          amountLabelIdentifier: ScreenIdentifier.ResultView.totalBillValueLabel.rawValue)
     }()
     
     private let totalTipView: AmountView = {
-        return AmountView(title: "Total tip", textAlignment: .right)
+        return AmountView(title: "Total tip",
+                          textAlignment: .right,
+                          amountLabelIdentifier: ScreenIdentifier.ResultView.totalTipValueLabel.rawValue)
     }()
     
     private lazy var hStackView: UIStackView = {
