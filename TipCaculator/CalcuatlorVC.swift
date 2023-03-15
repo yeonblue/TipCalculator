@@ -137,7 +137,6 @@ class CalcuatlorVC: UIViewController {
                         self.logoView.transform = .identity
                     }
                 }
-                
             }.store(in: &cancellable)
     }
 }

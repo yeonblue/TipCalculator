@@ -44,8 +44,6 @@
 		45F2C01629C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01729C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01A29C06A770080BD89 /* AudioPlayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2C01929C06A770080BD89 /* AudioPlayService.swift */; };
-		45F2C01B29C06A770080BD89 /* AudioPlayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2C01929C06A770080BD89 /* AudioPlayService.swift */; };
-		45F2C01C29C06A770080BD89 /* AudioPlayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2C01929C06A770080BD89 /* AudioPlayService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -448,7 +446,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F2C01B29C06A770080BD89 /* AudioPlayService.swift in Sources */,
 				451C282829BB532500C05B45 /* TipCaculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +455,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				451C283229BB532500C05B45 /* TipCaculatorUITests.swift in Sources */,
-				45F2C01C29C06A770080BD89 /* AudioPlayService.swift in Sources */,
 				451C283429BB532500C05B45 /* TipCaculatorUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
