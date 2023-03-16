@@ -21,7 +21,8 @@ class SplitInputView: UIView {
     }()
     
     private lazy var decrementButton: UIButton = {
-        let button = buildButon(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        let button = buildButton(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
         button.tapPublisher
             .flatMap { [unowned self] in
                 Just(splitSubject.value == 1 ? 1 : splitSubject.value - 1)
@@ -33,7 +34,8 @@ class SplitInputView: UIView {
     }()
     
     private lazy var incrementButton: UIButton = {
-        let button = buildButon(text: "+", corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        let button = buildButton(text: "+", corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+        button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.increaseButton.rawValue
         button.tapPublisher
             .flatMap { [unowned self] in
                 Just(self.splitSubject.value + 1)
@@ -46,6 +48,7 @@ class SplitInputView: UIView {
     
     private lazy var quantityLabel: UILabel = {
         let label = LabelFactory.build(text: "1", font: ThemeFont.bold(size: 20), backgroundColor: .white)
+        label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue
         
         return label
     }()
@@ -105,7 +108,7 @@ class SplitInputView: UIView {
     /// - Parameters:
     ///   - text: title text
     ///   - corners: 둥그렇게 할 특정 모서리
-    private func buildButon(text: String, corners: CACornerMask) -> UIButton {
+    private func buildButton(text: String, corners: CACornerMask) -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitle(text, for: .normal)
         button.titleLabel?.font = ThemeFont.bold(size: 20)

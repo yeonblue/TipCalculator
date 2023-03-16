@@ -42,6 +42,7 @@ class BillInputView: UIView {
         textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
         textField.tintColor = ThemeColor.text // 커서의 색상이나 외곽 색을 변경
         textField.textColor = ThemeColor.text // text 자체 색상
+        textField.accessibilityIdentifier = ScreenIdentifier.BillInputView.textField.rawValue
         
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 36))
         toolbar.barStyle = .default

@@ -13,4 +13,26 @@ enum ScreenIdentifier {
         case totalBillValueLabel
         case totalTipValueLabel
     }
+    
+    enum LogoView: String {
+        case logoView
+    }
+    
+    enum BillInputView: String {
+        case textField
+    }
+    
+    enum TipInputView: String {
+        case tenPercentButton
+        case fifteenPercentButton
+        case twentyPercentButton
+        case customTipButton
+        case customTipAlertTextField
+    }
+    
+    enum SplitInputView: String {
+        case decrementButton
+        case increaseButton
+        case quantityValueLabel
+    }
 }

@@ -39,6 +39,8 @@
 		451C287729BDBF5400C05B45 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287629BDBF5400C05B45 /* UIResponder+Extension.swift */; };
 		451C287A29BDF6B100C05B45 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287929BDF6B100C05B45 /* Int+Extension.swift */; };
 		451C287C29BDFDD600C05B45 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C287B29BDFDD600C05B45 /* Double+Extension.swift */; };
+		45412FC929C2A34700B527FC /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286B29BC7E9E00C05B45 /* Tip.swift */; };
+		45412FCA29C2A34700B527FC /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C286B29BC7E9E00C05B45 /* Tip.swift */; };
 		45F2C01529C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01629C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
 		45F2C01729C06A2F0080BD89 /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 45F2C01429C06A2F0080BD89 /* click.m4a */; };
@@ -456,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451C282829BB532500C05B45 /* TipCaculatorTests.swift in Sources */,
+				45412FC929C2A34700B527FC /* Tip.swift in Sources */,
 				45F2C02E29C1E1780080BD89 /* ScreenIdentifier.swift in Sources */,
 				45F2C02529C1B68E0080BD89 /* TipCalcuatlorSnapshotTests.swift in Sources */,
 			);
@@ -466,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451C283229BB532500C05B45 /* TipCaculatorUITests.swift in Sources */,
+				45412FCA29C2A34700B527FC /* Tip.swift in Sources */,
 				45F2C02F29C1E1780080BD89 /* ScreenIdentifier.swift in Sources */,
 				45F2C02D29C1DECA0080BD89 /* CalCulatorScreen.swift in Sources */,
 			);
