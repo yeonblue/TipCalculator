@@ -22,7 +22,7 @@ class CalculatorScreen {
     }
     
     // MARK: - Result View
-    var amountPersonPerValueLabel: XCUIElement {
+    var totalAmountPerPersonValueLabel: XCUIElement {
         return app.staticTexts[ScreenIdentifier.ResultView.totalAmountPerPersonValueLabel.rawValue]
     }
     
@@ -104,7 +104,7 @@ class CalculatorScreen {
         decrementButton.tap(withNumberOfTaps: numberOfTaps, numberOfTouches: 1)
     }
     
-    func doubleTappLogoView() {
+    func doubleTapLogoView() {
         logoView.tap(withNumberOfTaps: 2, numberOfTouches: 1)
     }
 }

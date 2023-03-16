@@ -110,10 +110,10 @@ final class TipCalcuatlorSnapshotTests: XCTestCase {
 
 /// Record로 저장된 SnapShot과 달라지면, Snapshot Test는 실패
 /// record 파라미터를 true로 주면 스크린샷을 update
-/// SnapShot Test는 iOS 앱의 뷰나 레이어를 캡쳐하고 저장된 참조 이미지와 비교하는 유닛 테스트 방법입니다.
+/// SnapShot Test는 iOS 앱의 뷰나 레이어를 캡쳐하고 저장된 참조 이미지와 비교하는 유닛 테스트 방법.
 /// SnapShot Test를 사용하면 뷰의 디자인이나 레이아웃이 예상대로 나오는지 쉽게 확인할 수 있습니다.
-/// SnapShot Test의 장점은 뷰의 변화를 시각적으로 파악할 수 있고, 코드로 테스트하기 어려운 뷰의 속성을 테스트할 수 있다는 것입니다.
-/// 단점은 참조 이미지가 많아지면 저장 공간이 커지고, 테스트 실행 시간이 길어지고, 환경에 따라 테스트 결과가 달라질 수 있다는 것입니다.
+/// SnapShot Test의 장점은 뷰의 변화를 시각적으로 파악할 수 있고, 코드로 테스트하기 어려운 뷰의 속성을 테스트할 수 있다.
+/// 단점은 참조 이미지가 많아지면 저장 공간이 커지고, 테스트 실행 시간이 길어지고, 환경에 따라 테스트 결과가 달라질 수 있다.
 
 extension UIView {
     

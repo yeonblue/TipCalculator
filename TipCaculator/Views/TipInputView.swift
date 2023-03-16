@@ -155,6 +155,7 @@ class TipInputView: UIView {
             tf.placeholder = "Make it generous!"
             tf.keyboardType = .numberPad
             tf.autocorrectionType = .no
+            tf.accessibilityIdentifier = ScreenIdentifier.TipInputView.customTipAlertTextField.rawValue
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel)

@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// UITest를 위한 accessibilityIdentifier를 정의
 enum ScreenIdentifier {
     enum ResultView: String {
         case totalAmountPerPersonValueLabel
